@@ -56,7 +56,7 @@ def conversion():
 
     #tess.pytesseract.tesseract_cmd = r'C:\Users\bishn\AppData\Local\Programs\Tesseract-OCR\tesseract.exe'
 
-    tess.pytesseract.tesseract_cmd = r'./.apt / usr / share / tesseract - ocr / 4.00 / tessdata/tesseract.exe'
+    #tess.pytesseract.tesseract_cmd = r'./.apt / usr / share / tesseract - ocr / 4.00 / tessdata/tesseract.exe'
     img = cv2.imread('static/uploads/image.png')
     img = cv2.resize(img, (int(img.shape[1] + (img.shape[1] * .1)),
                            int(img.shape[0] + (img.shape[0] * .25))),
