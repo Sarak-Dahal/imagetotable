@@ -53,6 +53,7 @@ def display_image(filename):
     return redirect(url_for('static', filename='uploads/' + filename), code=301)
 
 def conversion():
+    tess.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
 
     #tess.pytesseract.tesseract_cmd = r'C:\Users\bishn\AppData\Local\Programs\Tesseract-OCR\tesseract.exe'
 
