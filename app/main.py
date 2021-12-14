@@ -1,6 +1,6 @@
+#web: gunicorn --bind 0.0.0.0:$PORT run:app
 
 from flask import render_template, request, flash, redirect, url_for
-from virtualenv.activation import python
 
 from app import app
 from werkzeug.utils import secure_filename
