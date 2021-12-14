@@ -1,0 +1,15 @@
+
+SUMMARY 
+Processor ,MediaTek Helio G80 
+Display ,6.6 inches 16.76 cms 
+Storage ,64 GB 
+Front Camera ,Single 12 MP Camera 
+Rear Camera ,Triple 16 MP Camera 5 MP Camera ,2 MP Camera 
+Battery ,6000 mAh 
+RAM ,4GB 
+GENERAL 
+Launch Date ,February 21 2022 
+Face unlock ,Yes 
+PROCESSOR 
+Chipset ,MediaTek Helio G80 
+No of Cores ,8 Octa Core 

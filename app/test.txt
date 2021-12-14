@@ -1,0 +1,17 @@
+
+,Vivo ,X80 Pro ,Plus 5G Specifications 
+,SUMMARY 
+,Processor ,Qualcomm ,Snapdragon 888 Plus 
+,Display ,6.78 inches 17.22 cms 
+,Storage ,256 GB 
+,Front Camera ,Single 32 MP f/2.5 Wide Angle Camera 
+,Rear Camera ,Quad 50 MP ,/1.57 Wide Angle Camera ,8 MP Camera ,12 MP f/1.6 
+,Camera * 48 MP f/2.2 Wide Angle Ultra-Wide Angle Camera 
+,Battery ,4500 mAh 
+,RAM ,12GB 
+,GENERAL 
+,Launch Date ,January 19 2022 
+,Face unlock ,Yes 
+,Water Resistant ,Yes Water resistant up to 30 minutes in a depth of 1.5 meter IP68 
+,PROCESSOR 
+,Chipset ,Qualcomm ,Snapdragon 888 Plus 

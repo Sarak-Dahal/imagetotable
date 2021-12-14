@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Converto - Convert Image to Table, Image to Excel</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- Image and text -->
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light" style="background-color: transparent !important;background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(255, 255, 255, 1));">
+        <a class="navbar-brand" href="#" style="color:white;margin-left:10%;font-size:3rem">Converto</a>
+    </nav>
+
+
+
+<p><h1 align="center">Python Flask Upload and Convert Image to Table</h1></p>
+<div class="container">
+<div class="row">
+    <h2>Select a file to upload</h2>
+    <p>
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul>
+            {% for message in messages %}
+              <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+    </p>
+    {% if filename %}
+        <div>
+            <img src="{{ url_for('display_image', filename=filename) }}">
+        </div>
+    {% endif %}
+    <form method="post" action="/" enctype="multipart/form-data">
+        <dl>
+            <p>
+                <input type="file" name="file" class="form-control" autocomplete="off" required>
+            </p>
+        </dl>
+        <p>
+            <input type="submit" value="Submit" class="btn btn-primary">
+        </p>
+    </form>
+
+    <form method="post" action="/con" enctype="multipart/form-data">
+        <input type="button" value="See conversion" class="btn btn-primary">
+        <br> <br> <br>
+        {% include 'con.html' %}
+    </form>
+
+
+
+</div>
+</div>
+
+</body>
+
+
+<style>
+
+    img{
+        width:10rem;
+        height:10rem;
+    }
+</style>
+
