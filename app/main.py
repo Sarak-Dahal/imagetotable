@@ -5,11 +5,11 @@ from werkzeug.utils import secure_filename
 import os
 
 
-@app.route('https://convertimagetotable.herokuapp.com')
+@app.route('https://convertimagetotable.herokuapp.com/')
 def home():
     return render_template('index.html')
 
-@app.route('/con')
+@app.route('https://convertimagetotable.herokuapp.com/con')
 def con():
     return render_template('con.html')
 
@@ -42,7 +42,7 @@ def uploadImg():
         return redirect(request.url)
 
 
-@app.route('/display/<filename>')
+@app.route('https://convertimagetotable.herokuapp.com/display/<filename>')
 def display_image(filename):
     return redirect(url_for('static', filename='uploads/' + filename), code=301)
 
