@@ -5,11 +5,11 @@ from werkzeug.utils import secure_filename
 import os
 
 
-@app.route('https://convertimagetotable.herokuapp.com/')
+@app.route('/')
 def home():
     return render_template('index.html')
 
-@app.route('https://convertimagetotable.herokuapp.com/con')
+@app.route('/con')
 def con():
     return render_template('con.html')
 
@@ -17,7 +17,7 @@ ALLOWED_EXTENSIONS = set(['png','jpg','jpeg','gif'])
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.',1)[1].lower() in ALLOWED_EXTENSIONS
 
-@app.route('https://convertimagetotable.herokuapp.com', methods=['POST'])
+@app.route('/', methods=['POST'])
 def uploadImg():
     if 'file' not in request.files:
         flash('No File Attached !')
@@ -42,7 +42,7 @@ def uploadImg():
         return redirect(request.url)
 
 
-@app.route('https://convertimagetotable.herokuapp.com/display/<filename>')
+@app.route('/display/<filename>')
 def display_image(filename):
     return redirect(url_for('static', filename='uploads/' + filename), code=301)
 
