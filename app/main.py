@@ -1,4 +1,4 @@
-#web: gunicorn --bind 0.0.0.0:$PORT run:app
+
 
 from flask import render_template, request, flash, redirect, url_for
 
