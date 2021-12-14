@@ -5,7 +5,7 @@ from werkzeug.utils import secure_filename
 import os
 
 
-@app.route('/')
+@app.route('https://convertimagetotable.herokuapp.com')
 def home():
     return render_template('index.html')
 
@@ -17,7 +17,7 @@ ALLOWED_EXTENSIONS = set(['png','jpg','jpeg','gif'])
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.',1)[1].lower() in ALLOWED_EXTENSIONS
 
-@app.route('/', methods=['POST'])
+@app.route('https://convertimagetotable.herokuapp.com', methods=['POST'])
 def uploadImg():
     if 'file' not in request.files:
         flash('No File Attached !')
