@@ -1,8 +1,14 @@
 
 from flask import render_template, request, flash, redirect, url_for
+from virtualenv.activation import python
+
 from app import app
 from werkzeug.utils import secure_filename
 import os
+import cv2
+import pytesseract as tess
+from pytesseract import Output
+import pandas as pd
 
 
 @app.route('/')
@@ -47,10 +53,7 @@ def display_image(filename):
     return redirect(url_for('static', filename='uploads/' + filename), code=301)
 
 def conversion():
-    import cv2
-    import pytesseract as tess
-    from pytesseract import Output
-    import pandas as pd
+
     tess.pytesseract.tesseract_cmd = r'C:\Users\bishn\AppData\Local\Programs\Tesseract-OCR\tesseract.exe'
 
     img = cv2.imread('static/uploads/image.png')
